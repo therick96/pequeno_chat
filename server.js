@@ -19,6 +19,8 @@ server.use(express.static('./public'));
 
 //Controllers
 require("./app/controllers/home")(server);
+require("./app/controllers/registro")(server);
+require("./app/controllers/ingresa")(server);
 //Connections
 
 server.listen(8000);
