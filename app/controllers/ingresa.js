@@ -6,7 +6,7 @@ var ingresaController = function (server) {
                                             subtitulo : 'Identificate'});
         })
         .post(function(req, res){
-            
+            console.log(req.body);
         });    
 };
 
