@@ -13,8 +13,8 @@ swig.setDefaults({
 // Express
 server.use(bodyParser.urlencoded({   extended : true }));
 server.use(bodyParser.json());
-server.use(cookieParser());
-server.use(sesion({    secret : 'Secreto'  }));
+server.use(cookieParser()); //Parseador de cookies
+server.use(sesion({    secret : 'Secreto'  })); //Clave secreta
 
 //Swig
 server.engine('html', swig.renderFile);
