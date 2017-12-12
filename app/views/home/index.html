@@ -1,11 +1,28 @@
 {% extends '../base.html' %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Titulo</title>
-</head>
-<body>
-
-</body>
-</html>
+{% block content %}
+    <div class="content">
+        <header>
+            <p align="center">Pequeño Chat</p>
+            <h2 align="center">
+                Ingresar
+            </h2>
+        </header>
+        <div class="row uniform">
+            <div class="4u 12u$(xsmall)">
+            </div>
+            <div class="4u 12u$(xsmall)">
+                <form method="POST">
+                    <input type="text" name="user" placeholder="Usuario" />
+                    <input type="password" name="clave" placeholder="Contraseña" />
+                    <div align="center">
+                        <input type="submit" name="enviar" value="Entrar" class="alt" />
+                        
+                    </div>
+                </form>
+            </div>
+            <div class="4u 12u$(xsmall)">
+            </div>
+        </div>
+    </div>
+{% endblock %}
