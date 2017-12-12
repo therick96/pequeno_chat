@@ -10,6 +10,12 @@ swig.setDefaults({
     'cache' : false
 });
 
+// Express
+server.use(bodyParser.urlencode({   extended : true }));
+server.use(bodyParser.json());
+server.use(cookieParser());
+server.use(session({    secret : 'Secreto'  }));
+
 //Swig
 server.engine('html', swig.renderFile);
 server.set('view engine', 'html');
