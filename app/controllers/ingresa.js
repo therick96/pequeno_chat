@@ -4,6 +4,9 @@ var ingresaController = function (server) {
         .get(function (req, res) {
             res.render('./ingresa.html', {  titulo : 'Entrar',
                                             subtitulo : 'Identificate'});
+        })
+        .post(function(req, res){
+            
         });    
 };
 
