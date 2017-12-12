@@ -4,9 +4,17 @@
     <title>{{titulo}}</title>
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
 </head>
-<body>
-    {% block content %}
+<body bgcolor="black">
+    <div class="content">
+        <header>
+            <p align="center">Pequeño Chat</p>
+            <h2 align="center">
+                {{subtitulo}}
+            </h2>
+        </header>
+        {% block content %}
 
-    {% endblock %}
+        {% endblock %}
+    </div>
 </body>
 </html>
