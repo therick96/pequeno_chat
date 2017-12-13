@@ -4,8 +4,9 @@ var homeC = function (server) {
         .get(function (req, res){
             console.log(req.session);
             if ('user' in req.session){
-                res.render('home/index', {  titulo : 'Entrar',
-                                            subtitulo : 'Chat'});
+                res.render('index', {   titulo : 'Entrar',
+                                        subtitulo : 'Chat',
+                                        usuario : req.session['user']});
             }else{
                 res.redirect('/ingresa');
 

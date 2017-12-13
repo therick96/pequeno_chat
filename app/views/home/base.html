@@ -7,6 +7,9 @@
 <body bgcolor="black">
     <div class="content">
         <header>
+            {% if usuario %}
+                <p align="right"><a href="/logout">Cerrar Sesión</a></p>
+            {% endif %}
             <p align="center">Pequeño Chat</p>
             <h2 align="center">
                 {{subtitulo}}
