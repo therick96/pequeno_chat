@@ -1,4 +1,32 @@
 {% extends './home/base.html' %}
 
 {% block content %}
+    <div class="row uniform" >
+        <div class="1u 12u$(xsmall)">
+        </div>
+        <div class="2u 12u$(xsmall)">
+            <div class="row" style="background-color: #abb2b9; min-height: 300px;">
+                
+            </div>
+        </div>
+        <div class="7u 12u$(xsmall)">
+            <div class="row" style="min-height: 300px; background-color:  #e5e8e8;">
+                
+            </div>
+        </div>
+        <div class="2u 12u$(xsmall)">
+        </div>
+    </div>
+    <div class="row uniform">
+        <div class="3u 12u$(xsmall)" align="right">
+            <form>
+                <input type="button" value="Escribir" name="Escribir" class="alt">
+        </div>
+        <div class="7u 12u$(xsmall)">
+                <textarea name="texto" placeholder="Escribir aqui..." id="message"></textarea>
+        </div>
+        <div class="2u 12u$(xsmall)">
+            </form>
+        </div>
+    </div>
 {% endblock %}

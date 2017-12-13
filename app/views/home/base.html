@@ -4,16 +4,13 @@
     <title>{{titulo}}</title>
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
 </head>
-<body bgcolor="black">
+<body>
     <div class="content">
         <header>
-            {% if usuario %}
-                <p align="right"><a href="/logout">Cerrar Sesión</a></p>
-            {% endif %}
-            <p align="center">Pequeño Chat</p>
             <h2 align="center">
                 {{subtitulo}}
             </h2>
+            <p align="center">Pequeño Chat</p>
         </header>
         {% if mensajito %}
                 <div style="background-color: {{color}}; text-align: center;">
@@ -25,9 +22,17 @@
         {% endblock %}
     </div>
     {% block footer %}
-        <footer>
+        <footer style="height: 10%">
             <p>Creado por Erick Gomez</p>
+            {% if usuario %}
+                <div style="float: right;">
+                    <a href="/logout" class="button alt">Cerrar Sesión</a>
+                </div>
+            {% endif %}
         </footer>
+    {% endblock %}
+    
+    {% block scripts %}
     {% endblock %}
 </body>
 </html>
