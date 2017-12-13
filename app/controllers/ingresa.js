@@ -28,6 +28,16 @@ var ingresaController = function (server) {
                             });
 
         });    
+
+    server.route('/logout')
+        .get(function (req, res) {
+            if ('user' in req.session){
+                delete req.session['user'];
+                res.redirect('/ingresa');
+            }else{
+                res.redirect('/ingresa');
+            }
+        });
 };
 
 module.exports = ingresaController;
