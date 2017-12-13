@@ -1,6 +1,15 @@
 {% extends './base.html' %}
 
 {% block content %}
+            {% if mensajito %}
+                <div style="background-color: {{color}}; text-align: center;">
+                    {% if mensajito == "error" %}
+                        <p>Nombre de usuario ya registrado</p>
+                    {% else %}
+                        <p>Registrado con exito</p>
+                    {% endif %}
+                </div>
+            {% endif %}
     <div class="row uniform">
         <div class="4u 12u$(xsmall)">
         </div>
