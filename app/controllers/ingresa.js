@@ -19,6 +19,11 @@ var ingresaController = function (server) {
                                     console.log(usr);
                                     req.session["user"] = usr.usuario
                                     res.redirect('/');
+                                }else{
+                                    res.render('./ingresa.html', {  titulo : 'Entrar',
+                                                                    subtitulo : 'Identificate',
+                                                                    color : '#F44336',
+                                                                    mensajito : 'Usuario o contraseña invalidos'});
                                 }
                             });
 
