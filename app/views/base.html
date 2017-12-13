@@ -12,6 +12,11 @@
                 {{subtitulo}}
             </h2>
         </header>
+        {% if mensajito %}
+                <div style="background-color: {{color}}; text-align: center;">
+                    <p>{{ mensajito }}</p>
+                </div>
+            {% endif %}
         {% block content %}
 
         {% endblock %}
