@@ -3,8 +3,12 @@ var usuario = require('../models/users');
 var registroController = function (server) {
     server.route('/registro')
         .get(function (req, res){
-            res.render('./registro.html', { titulo : 'Registrarse',
-                                            subtitulo : 'Registrate'});
+            if ('user' in req.session){
+                res.redirect('/')
+            }else{
+                res.render('./registro.html', { titulo : 'Registrarse',
+                                                subtitulo : 'Registrate'});
+            }
         })
         .post(function (req, res) {
             var user = req.body.user;
