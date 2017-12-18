@@ -6,7 +6,7 @@ var homeC = function (server) {
         .get(function (req, res){
             console.log(req.session);
             if ('user' in req.session){
-                conversacion.find().sort("fecha").populate("user").exec(function (error, respuesta) {
+                conversacion.find().sort([["fecha",-1]]).limit(8).populate("user").exec(function (error, respuesta) {
                     res.render('index', {   titulo : 'Entrar',
                                             subtitulo : 'Chat',
                                             usuario : req.session['user'],

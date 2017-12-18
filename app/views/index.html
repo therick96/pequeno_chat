@@ -1,6 +1,18 @@
 {% extends './home/base.html' %}
 
 {% block content %}
+    <div class="row uniform">
+        <div class="3u 12u$(xsmall)" align="right">
+            <form method="POST">
+                <input type="submit" value="Escribir" name="Escribir" class="alt">
+        </div>
+        <div class="7u 12u$(xsmall)">
+                <textarea name="mensaje" placeholder="Escribir aqui..." id="message"></textarea>
+        </div>
+        <div class="2u 12u$(xsmall)">
+            </form>
+        </div>
+    </div>
     <div class="row uniform" >
         <div class="1u 12u$(xsmall)">
         </div>
@@ -36,18 +48,6 @@
             <!--/div-->
         </div>
         <div class="2u 12u$(xsmall)">
-        </div>
-    </div>
-    <div class="row uniform">
-        <div class="3u 12u$(xsmall)" align="right">
-            <form method="POST">
-                <input type="submit" value="Escribir" name="Escribir" class="alt">
-        </div>
-        <div class="7u 12u$(xsmall)">
-                <textarea name="mensaje" placeholder="Escribir aqui..." id="message"></textarea>
-        </div>
-        <div class="2u 12u$(xsmall)">
-            </form>
         </div>
     </div>
 {% endblock %}
