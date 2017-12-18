@@ -1,5 +1,18 @@
 {% extends './home/base.html' %}
 
+{% block scripts %}
+    <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+        socket.on("conversa", function (data) {
+            console.log(data);
+            var html = "<table><thead><th><td>" + data.usuario + "</td><td>" + data.fecha + "</td></th></thead><tbody><tr><td colspan='2'>" + data.mensaje + "</td></tr></tbody></table>";
+            $("#Chat").prepend(html);
+        });
+    </script>
+{% endblock %}
+
+
 {% block content %}
     <div class="row uniform">
         <div class="3u 12u$(xsmall)" align="right">
@@ -21,7 +34,7 @@
                 
             </div>
         </div>
-        <div class="7u 12u$(xsmall)">
+        <div class="7u 12u$(xsmall)" id="Chat">
             <!--div class="row" style="min-height: 300px; background-color:  #e5e8e8;"-->
                 {% for chat in datos %}
                     <table >
